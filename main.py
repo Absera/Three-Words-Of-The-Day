@@ -4,13 +4,13 @@ import schedule
 import emoji
 from vocablury import *
 
-TOKEN = "1121128262:AAHVx5CJQLEfcA4zwkeC7gtnOYxPNT9QevY"
+TOKEN = "token here"
 bot = telegram.Bot(token=TOKEN)
 
 def sendSeparator():
     global bot
     separator = "*****"
-    bot.sendMessage(chat_id="@ThreeWordsOfTheDay", text=separator)
+    bot.sendMessage(chat_id="username", text=separator)
 
             
 def sendVocablury():
@@ -28,7 +28,7 @@ _{generated['definition']}_
 Share @ThreeWordsOfTheDay
             """
     try:
-        bot.sendMessage(chat_id="@ThreeWordsOfTheDay", text=text, parse_mode=telegram.ParseMode.MARKDOWN)
+        bot.sendMessage(chat_id="username", text=text, parse_mode=telegram.ParseMode.MARKDOWN)
         print("Sent!")
     except:
         print("Retrying...")
